@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    cq:dialogMode="floating"
+    jcr:primaryType="cq:EditConfig">
+    <cq:inplaceEditing
+        jcr:primaryType="cq:InplaceEditingConfig"
+        active="{Boolean}true"
+        configPath="/apps/blog/dialogs/standardRTE"
+        editorType="hybrid">
+        <cq:childEditors jcr:primaryType="nt:unstructured">
+            <title
+                jcr:primaryType="cq:ChildEditorConfig"
+                title="Title"
+                type="text"/>
+            <text
+                jcr:primaryType="cq:ChildEditorConfig"
+                title="Text"
+                type="text"/>
+        </cq:childEditors>
+    </cq:inplaceEditing>
+</jcr:root>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Widget"
+    hideLabel="{Boolean}true"
+    name="./standardRTE"
+    xtype="richtext">
+    <rtePlugins jcr:primaryType="nt:unstructured">
+        <edit
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <font
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <justify
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <undo
+            jcr:primaryType="nt:unstructured"
+            features="[undo]"/>
+        <links
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <paraformat
+            jcr:primaryType="nt:unstructured"
+            features="*">
+            <formats jcr:primaryType="cq:WidgetCollection">
+                <paragraph
+                    jcr:primaryType="nt:unstructured"
+                    description="Paragraph"
+                    tag="p"/>
+                <heading1
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 1"
+                    tag="h1"/>
+                <heading2
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 2"
+                    tag="h2"/>
+                <heading3
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 3"
+                    tag="h3"/>
+                <heading4
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 4"
+                    tag="h4"/>
+                <heading5
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 5"
+                    tag="h5"/>
+                <heading6
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 6"
+                    tag="h6"/>
+            </formats>
+        </paraformat>
+        <styles
+            jcr:primaryType="nt:unstructured"
+            features="*">
+            <styles jcr:primaryType="cq:WidgetCollection">
+
+            </styles>
+        </styles>
+        <table
+            jcr:primaryType="nt:unstructured"
+            features="*">
+            <cellStyles jcr:primaryType="cq:WidgetCollection">
+                <lastcolumn
+                    jcr:primaryType="nt:unstructured"
+                    cssName="last-col"
+                    text="Last Column"/>
+                <alternaterow2
+                    jcr:primaryType="nt:unstructured"
+                    cssName="row-alternate2"
+                    text="Light Gray Row"/>
+                <alternaterow1
+                    jcr:primaryType="nt:unstructured"
+                    cssName="row-alternate"
+                    text="Dark Gray Row"/>
+                <alternaterow3
+                    jcr:primaryType="nt:unstructured"
+                    cssName="row-alternate3"
+                    text="White Row"/>
+                <bottomborder
+                    jcr:primaryType="nt:unstructured"
+                    cssName="bott-border"
+                    text="Bottom Border"/>
+                <topborder
+                    jcr:primaryType="nt:unstructured"
+                    cssName="top-border"
+                    text="Top Border"/>
+            </cellStyles>
+            <tableStyles jcr:primaryType="cq:WidgetCollection">
+                <alternaterowtable
+                    jcr:primaryType="nt:unstructured"
+                    cssName="table-with-alternate-row"
+                    text="Grey Table With Alternate Row"/>
+                <customTable
+                    jcr:primaryType="nt:unstructured"
+                    cssName="table-component"
+                    text="Grey Table"/>
+                <coloredheadtable
+                    jcr:primaryType="nt:unstructured"
+                    cssName="table-headcolor"
+                    text="Table With Head Color"/>
+                <gradientheadtable
+                    jcr:primaryType="nt:unstructured"
+                    cssName="table-gradient"
+                    text="Table With Gradient Head"/>
+                <innertable
+                    jcr:primaryType="nt:unstructured"
+                    cssName="inner-table"
+                    text="Inner Table"/>
+            </tableStyles>
+        </table>
+        <misctools
+            jcr:primaryType="nt:unstructured"
+            features="[specialchars,sourceedit]">
+            <specialCharsConfig jcr:primaryType="nt:unstructured">
+                <chars jcr:primaryType="nt:unstructured">
+                    <copyright
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;copy;"/>
+                    <trademark
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;trade;"/>
+                    <dagger
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;dagger;"/>
+                    <degree
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;deg;"/>
+                    <registered
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;reg;"/>
+                    <double_x0020_dagger
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;Dagger;"/>
+                    <section
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;sect;"/>
+                    <currency
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;curren;"/>
+                    <newline
+                        jcr:primaryType="nt:unstructured"
+                        entity="&lt;br/>&lt;br/>"/>
+                    <pound
+                        jcr:primaryType="nt:unstructured"
+                        entity="&amp;pound;"/>
+                </chars>
+            </specialCharsConfig>
+        </misctools>
+        <image
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <spellcheck
+            jcr:primaryType="nt:unstructured"
+            features="*"
+            invalidStyle="background-color:#FFFF33;"/>
+    </rtePlugins>
+</jcr:root>

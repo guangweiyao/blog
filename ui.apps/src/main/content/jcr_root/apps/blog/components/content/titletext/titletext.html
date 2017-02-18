@@ -1,0 +1,11 @@
+<!--/* Title Text Component */-->
+<div data-sly-test="${wcmmode.edit}" class="edit-mode">Title & Text</div>
+
+<div data-sly-use.text="text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" data-emptytext="Text">
+    Title is: ${properties.title @ context=text.context}
+</div>
+<br/>
+<div data-sly-use.text="text.js" data-sly-unwrap="${text.context == text.CONST.CONTEXT_HTML}" data-emptytext="Text">
+    Text is: ${properties.text @ context=text.context}
+</div>
+
