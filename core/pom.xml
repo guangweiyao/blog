@@ -17,14 +17,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.myorg</groupId>
         <artifactId>org-myorg-blog</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
+
     <artifactId>org-myorg-blog.core</artifactId>
     <packaging>bundle</packaging>
+    
     <name>Blog - Core</name>
     <description>Core bundle for Blog</description>
     <build>
@@ -45,6 +48,8 @@
                             artifactId2;inline=true
                         </Embed-Dependency>
                         -->
+                        <!-- Import any version of javax.inject, to allow running on multiple versions of AEM -->
+                        <Import-Package>javax.inject;version=0.0.0,*</Import-Package>
                         <Sling-Model-Packages>
                             org.myorg.blog.core
                         </Sling-Model-Packages>
@@ -131,6 +136,18 @@
         <dependency>
             <groupId>junit-addons</groupId>
             <artifactId>junit-addons</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.aem</groupId>
+            <artifactId>uber-jar</artifactId>
+            <version>6.3.0</version>
+            <classifier>apis</classifier>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.4</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 </project>
