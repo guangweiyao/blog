@@ -13,8 +13,10 @@ public class TitleUse extends WCMUsePojo {
     private static final Logger log = LoggerFactory.getLogger(TitleUse.class);
 
     private static final String TITLE_PROPERTY_NAME = "jcr:title";
+    private static final String TYPE_PROPERTY_NAME = "type";
 
     private String title;
+    private String type;
 
     @Override
     public void activate()
@@ -22,6 +24,8 @@ public class TitleUse extends WCMUsePojo {
         log.info("--- Started : TitleUse : Activate");
 
         title = getProperties().get(TITLE_PROPERTY_NAME, String.class);
+        type = getProperties().get(TYPE_PROPERTY_NAME, String.class);
+
         
         if (StringUtils.isBlank(title)) {
             title = StringUtils.defaultIfEmpty(getCurrentPage().getPageTitle(), getCurrentPage().getTitle());
@@ -30,5 +34,9 @@ public class TitleUse extends WCMUsePojo {
 
     public String getTitle() {
         return title;
+    }
+
+    public String getType() {
+        return type;
     }
 }
