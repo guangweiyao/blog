@@ -1,0 +1,30 @@
+{
+  "jcr:primaryType": "cq:Page",
+  "jcr:createdBy": "admin",
+  "jcr:created": "Wed May 24 2017 10:47:14 GMT-0700",
+  "jcr:content": {
+    "jcr:primaryType": "cq:PageContent",
+    "jcr:createdBy": "admin",
+    "jcr:title": "English",
+    "cq:template": "/apps/blog/templates/page-home",
+    "jcr:created": "Wed May 24 2017 10:47:14 GMT-0700",
+    "cq:lastModified": "Thu May 25 2017 13:57:11 GMT-0700",
+    "sling:resourceType": "blog/components/structure/homePage",
+    "cq:lastModifiedBy": "admin",
+    "bodypar": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "wcm/foundation/components/parsys",
+      "title": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:title": "Blog English Homepage",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Tue May 23 2017 21:52:23 GMT-0700",
+        "type": "h2",
+        "jcr:lastModified": "Thu May 25 2017 13:57:11 GMT-0700",
+        "sling:resourceType": "blog/components/content/title"
+      }
+    }
+  }
+}
+
