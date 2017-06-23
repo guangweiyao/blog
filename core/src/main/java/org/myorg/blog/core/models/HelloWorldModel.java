@@ -15,17 +15,23 @@
  */
 package org.myorg.blog.core.models;
 
+import org.apache.sling.api.resource.Resource;
+import org.apache.sling.models.annotations.Default;
+import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.Optional;
+import org.apache.sling.settings.SlingSettingsService;
+
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 import javax.inject.Named;
 
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.Model;
-import org.apache.sling.settings.SlingSettingsService;
-
 @Model(adaptables=Resource.class)
 public class HelloWorldModel {
+
+    /* how you can get the current resource
+    @Self
+    private Resource resource;
+    */
 
     @Inject
     private SlingSettingsService settings;
@@ -33,11 +39,21 @@ public class HelloWorldModel {
     @Inject @Named("sling:resourceType") @Default(values="No resourceType")
     protected String resourceType;
 
+    @Inject @Optional
+    private String text;
+
+    /* how you can get the text property value
+    @ValueMapValue(optional = true)
+    private String text;*/
+
     private String message;
 
     @PostConstruct
     protected void init() {
-        message = "\tHello World!\n";
+       /* how you can use InheritanceValueMap in init()
+        InheritanceValueMap iProperties = new HierarchyNodeInheritanceValueMap(resource);
+        text = iProperties.getInherited("text", String.class);*/
+        message = "\t" + text + "\n";
         message += "\tThis is instance: " + settings.getSlingId() + "\n";
         message += "\tResource type is: " + resourceType + "\n";
     }
