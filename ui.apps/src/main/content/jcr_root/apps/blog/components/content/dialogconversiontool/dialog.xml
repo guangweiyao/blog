@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Dialog"
+    title="Dialog Conversion Tool"
+    xtype="dialog">
+    <items
+        jcr:primaryType="cq:Widget"
+        xtype="tabpanel">
+        <items jcr:primaryType="cq:WidgetCollection">
+            <general
+                jcr:primaryType="cq:Panel"
+                title="General">
+                <items jcr:primaryType="cq:WidgetCollection">
+                    <text
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Text"
+                        name="./text"
+                        xtype="textfield"/>
+                    <select
+                        jcr:primaryType="cq:Widget"
+                        allowBlank="{Boolean}true"
+                        fieldLabel="Select"
+                        name="./select"
+                        type="select"
+                        xtype="selection">
+                        <options jcr:primaryType="cq:WidgetCollection">
+                            <optionOne
+                                jcr:primaryType="nt:unstructured"
+                                text="Option One"
+                                value="optionOne"/>
+                            <optionTwo
+                                jcr:primaryType="nt:unstructured"
+                                text="Option Two"
+                                value="optionTwo"/>
+                        </options>
+                        <listeners
+                            jcr:primaryType="nt:unstructured"
+                            loadcontent="function(){ var source = this.getValue();&#xa; if(source == 'optionOne') &#xa; this.findParentByType('dialog').getField('./checkbox').show(); &#xa; else &#xa;this.findParentByType('dialog').getField('./checkbox').hide(); &#xa; } "
+                            selectionchanged="function(){ var source = this.getValue();&#xa; if(source == 'optionOne') &#xa; this.findParentByType('dialog').getField('./checkbox').show(); &#xa; else &#xa;this.findParentByType('dialog').getField('./checkbox').hide(); &#xa; } "/>
+                    </select>
+                    <checkbox
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Checkbox"
+                        name="./checkbox"
+                        type="checkbox"
+                        xtype="selection"/>
+                    <multifield
+                        jcr:primaryType="cq:Widget"
+                        fieldDescription="Press + to add more item"
+                        fieldLabel="Multifield"
+                        key="multifield"
+                        name="./multifield"
+                        xtype="multifield">
+                        <fieldConfig
+                            jcr:primaryType="cq:Widget"
+                            xtype="multifieldpanel">
+                            <items jcr:primaryType="cq:WidgetCollection">
+                                <multifieldText
+                                    jcr:primaryType="cq:Widget"
+                                    fieldLabel="Multifield text"
+                                    key="multifieldText"
+                                    name="./multifieldText"
+                                    xtype="textfield"/>
+                            </items>
+                        </fieldConfig>
+                    </multifield>
+                    <path
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Path"
+                        name="./path"
+                        xtype="blogpathfield"/>
+                    <richtext
+                        jcr:primaryType="cq:Widget"
+                        fieldLabel="Rich Text"
+                        name="./richtext"
+                        xtype="richtext">
+                        <rtePlugins
+                            jcr:primaryType="cq:Widget"
+                            path="/apps/blog/dialogs/standardRTE/rtePlugins.infinity.json"
+                            xtype="cqinclude"/>
+                    </richtext>
+                    <isRichTextFlag
+                        jcr:primaryType="cq:Widget"
+                        ignoreData="{Boolean}true"
+                        name="./textIsRich"
+                        value="true"
+                        xtype="hidden"/>
+                </items>
+            </general>
+        </items>
+    </items>
+</jcr:root>
