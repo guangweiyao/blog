@@ -5,4 +5,5 @@
     </filter>
     <filter root="/apps/sling" />
     <filter root="/etc/designs/blog"/>
+    <filter root="/etc/packages/adobe/consulting"/>
 </workspaceFilter>
