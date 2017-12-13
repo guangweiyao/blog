@@ -1,6 +1,7 @@
 (function(window, document, $, Granite, undefined) {
     "use strict";
     var registry = $(window).adaptTo("foundation-registry");
+    var PROP_ERROR_MESSAGE = "error-message";
 
     function createGenericIsInvalid(el) {
         return function() {
@@ -50,7 +51,7 @@
             field = $(element);
             value = $(field).find(".selected-icon>i").attr("class");
             if (value == "fip-icon-block") {
-                return "Please select the icon";
+                return field.data(PROP_ERROR_MESSAGE);
             } else {
                 return;
             }
