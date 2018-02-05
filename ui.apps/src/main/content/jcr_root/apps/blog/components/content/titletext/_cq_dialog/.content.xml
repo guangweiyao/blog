@@ -1,58 +1,69 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:granite="http://www.adobe.com/jcr/granite/1.0"
     jcr:primaryType="nt:unstructured"
-    jcr:title="Title &amp; Text"
-    sling:resourceType="cq/gui/components/authoring/dialog"
-    width="50rem"
-    height="30rem">
+    jcr:title="Title and Text"
+    sling:resourceType="cq/gui/components/authoring/dialog">
     <content
         jcr:primaryType="nt:unstructured"
         sling:resourceType="granite/ui/components/foundation/container">
-        <layout
-            jcr:primaryType="nt:unstructured"
-            sling:resourceType="granite/ui/components/foundation/layouts/tabs"
-            type="nav"/>
         <items jcr:primaryType="nt:unstructured">
-            <textconfigurations
+            <tabs
                 jcr:primaryType="nt:unstructured"
-                jcr:title="Text Configurations"
-                sling:resourceType="granite/ui/components/foundation/container">
-                <layout
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="granite/ui/components/foundation/layouts/fixedcolumns"/>
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
                 <items jcr:primaryType="nt:unstructured">
-                    <columns
+                    <properties
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/foundation/container">
+                        jcr:title="Properties"
+                        sling:resourceType="granite/ui/components/coral/foundation/container"
+                        margin="{Boolean}true">
                         <items jcr:primaryType="nt:unstructured">
-                            <title
+                            <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                                useFixedInlineToolbar="{Boolean}true"
-                                fieldLabel="Title"
-                                name="./title">
-                                <rtePlugins
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceSuperType="/apps/blog/dialogs/standardRTE/rtePlugins"/>
-                            </title>
-                            <text
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
-                                fieldLabel="Text"
-                                name="./text">
-                                <rtePlugins
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceSuperType="/apps/blog/dialogs/standardRTE/rtePlugins"/>
-                            </text>
-                            <isRichTextFlag
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="granite/ui/components/foundation/form/hidden"
-                                name="./textIsRich"
-                                value="true"/>
+                                sling:resourceType="granite/ui/components/coral/foundation/fixedcolumns"
+                                margin="{Boolean}true">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <column
+                                        jcr:primaryType="nt:unstructured"
+                                        granite:class="cq-RichText-FixedColumn-column"
+                                        sling:resourceType="granite/ui/components/coral/foundation/container">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <title
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                fieldLabel="Title"
+                                                name="./title">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/blog/dialogs/standardRTE/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/blog/dialogs/standardRTE/uiSettings"/>
+                                            </title>
+                                            <text
+                                                jcr:primaryType="nt:unstructured"
+                                                sling:resourceType="cq/gui/components/authoring/dialog/richtext"
+                                                useFixedInlineToolbar="{Boolean}true"
+                                                fieldLabel="Text"
+                                                name="./text">
+                                                <rtePlugins
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/blog/dialogs/standardRTE/rtePlugins"/>
+                                                <uiSettings
+                                                    jcr:primaryType="nt:unstructured"
+                                                    sling:resourceSuperType="/apps/blog/dialogs/standardRTE/uiSettings"/>
+                                            </text>
+                                        </items>
+                                    </column>
+                                </items>
+                            </columns>
                         </items>
-                    </columns>
+                    </properties>
                 </items>
-            </textconfigurations>
+            </tabs>
         </items>
     </content>
 </jcr:root>
