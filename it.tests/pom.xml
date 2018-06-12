@@ -23,7 +23,7 @@
     <parent>
         <groupId>org.myorg</groupId>
         <artifactId>org-myorg-blog</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+        <version>1.0.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
@@ -101,9 +101,14 @@
         <dependency>
             <groupId>org.myorg</groupId>
             <artifactId>org-myorg-blog.core</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
+            <version>1.0.0-SNAPSHOT</version>
             <type>bundle</type>
             <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>org.apache.sling.settings</artifactId>
+            <version>1.2.2</version>
         </dependency>
     </dependencies>
 </project>
