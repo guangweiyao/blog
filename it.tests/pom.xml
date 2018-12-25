@@ -43,6 +43,7 @@
     </scm-->
 
     <properties>
+        <bobcat.version>1.6.0</bobcat.version>
         <junit.version>4.8.2</junit.version>
     </properties>
 
@@ -50,65 +51,43 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.felix</groupId>
-                <artifactId>maven-scr-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.felix</groupId>
                 <artifactId>maven-bundle-plugin</artifactId>
                 <extensions>true</extensions>
                 <inherited>true</inherited>
-                    <configuration>
-                        <instructions>
-                            <Sling-Test-Regexp>.*Test</Sling-Test-Regexp>
-                        </instructions>
-                    </configuration>
-                </plugin>
-            </plugins>
+                <configuration>
+                    <instructions>
+                        <Sling-Test-Regexp>.*Test</Sling-Test-Regexp>
+                    </instructions>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 
     <dependencies>
         <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>osgi.core</artifactId>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-core</artifactId>
+            <version>${bobcat.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.osgi</groupId>
-            <artifactId>osgi.cmpn</artifactId>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-cumber</artifactId>
+            <version>${bobcat.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.felix</groupId>
-            <artifactId>org.apache.felix.scr.annotations</artifactId>
-            <scope>provided</scope>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-aem-touch-ui</artifactId>
+            <version>${bobcat.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <scope>provided</scope>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-reports</artifactId>
+            <version>${bobcat.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <!-- TODO create separate API package, this is just to get the special Sling test runner -->
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.junit.core</artifactId>
-            <version>1.0.8</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.myorg</groupId>
-            <artifactId>org-myorg-blog.core</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-            <type>bundle</type>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.sling</groupId>
-            <artifactId>org.apache.sling.settings</artifactId>
-            <version>1.2.2</version>
         </dependency>
     </dependencies>
 </project>

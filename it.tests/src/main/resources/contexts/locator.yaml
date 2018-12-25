@@ -1,0 +1,4 @@
+locator:
+  parsys.locator.format: div.parsys.%s
+  component.locator.format: div.%s
+  parsys.finder.offset: 6

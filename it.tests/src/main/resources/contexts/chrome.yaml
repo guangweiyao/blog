@@ -1,0 +1,2 @@
+chrome:
+  webdriver.type: chrome
