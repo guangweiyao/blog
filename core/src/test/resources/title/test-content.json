@@ -17,10 +17,19 @@
       "title": {
         "jcr:primaryType": "nt:unstructured",
         "jcr:createdBy": "admin",
+        "id": "titleId",
         "jcr:title": "Blog English Homepage",
         "jcr:lastModifiedBy": "admin",
         "jcr:created": "Tue May 23 2017 21:52:23 GMT-0700",
         "type": "h2",
+        "jcr:lastModified": "Thu May 25 2017 13:57:11 GMT-0700",
+        "sling:resourceType": "blog/components/content/title"
+      },
+      "empty-title": {
+        "jcr:primaryType": "nt:unstructured",
+        "jcr:createdBy": "admin",
+        "jcr:lastModifiedBy": "admin",
+        "jcr:created": "Tue May 23 2017 21:52:23 GMT-0700",
         "jcr:lastModified": "Thu May 25 2017 13:57:11 GMT-0700",
         "sling:resourceType": "blog/components/content/title"
       }

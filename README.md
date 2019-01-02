@@ -1,16 +1,18 @@
-# Sample AEM project template
+# Sample Blog project for AEM
 
-This is a project template for AEM-based applications. It is intended as a best-practice set of examples as well as a potential starting point to develop your own functionality.
+This is a sample blog project for AEM. It is intended as a best-practice set of examples for the use of my blog, as well as a potential starting point to develop your own functionality.
+
+This is **not** intended to be used for production.
 
 ## Modules
 
 The main parts of the template are:
 
-* core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as servlets or request filters.
+* core: Java bundle containing all core functionality like OSGi services, listeners or schedulers, as well as component-related Java code such as Sling Models, servlets or request filters.
 * ui.apps: contains the /apps (and /etc) parts of the project, ie JS&CSS clientlibs, components, templates, runmode specific configs as well as Hobbes-tests
-* ui.content: contains sample content using the components from the ui.apps
-* ui.tests: Java bundle containing JUnit tests that are executed server-side. This bundle is not to be deployed onto production.
-* ui.launcher: contains glue code that deploys the ui.tests bundle (and dependent bundles) to the server and triggers the remote JUnit execution
+* ui.content: contains sample configurations and content using the components from the ui.apps
+* it.launcher: to be updated
+* it.tests: to be updated
 
 ## How to build
 
@@ -29,6 +31,11 @@ Or to deploy it to a publish instance, run
 Or to deploy only the bundle to the author, run
 
     mvn clean install -PautoInstallBundle
+
+## System Requirements
+| Java        | AEM 6.4    | AEM 6.3    |
+| ----------  | ---------- | ---------- |
+| 1.8         | master     | release/aem-6.3 |
 
 ## Testing
 
