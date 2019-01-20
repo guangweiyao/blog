@@ -16,7 +16,7 @@ public abstract class AbstractComponentModel {
   /**
    * @return a prefix String which will be used for generating {@link #id} through {@link #getId()}
    */
-  protected abstract String getIDPrefix();
+  protected abstract String getIdPrefix();
 
   @SlingObject
   private Resource resource;
@@ -27,7 +27,7 @@ public abstract class AbstractComponentModel {
    */
   public String getId() {
     if (id == null) {
-      id = getIDPrefix() + "-" + String.valueOf(Math.abs(resource.getPath().hashCode() - 1));
+      id = getIdPrefix() + "-" + String.valueOf(Math.abs(resource.getPath().hashCode() - 1));
     }
     return id;
   }

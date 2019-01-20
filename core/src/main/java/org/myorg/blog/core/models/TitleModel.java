@@ -45,7 +45,7 @@ public class TitleModel extends AbstractComponentModel {
     }
 
     @Override
-    protected String getIDPrefix() {
+    protected String getIdPrefix() {
         return ID_PREFIX;
     }
 
