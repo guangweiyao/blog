@@ -25,6 +25,7 @@ public class GuiceModule extends AbstractModule {
 		install(new BobcumberModule());
 		install(new AemCommonModule());
 		install(new AemTouchUiModule());
+		/*install(new Aem64FullModule());*/
 	}
 
 }

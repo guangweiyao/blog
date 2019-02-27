@@ -6,6 +6,7 @@ apply plugin: 'java'
 sourceCompatibility = 1.8
 
 def bobcatVersion = '1.6.0'
+def bbaemVersion = '2.0.3'
 
 def maximumThreads = 3
 def maximumTestsInThread = 1
@@ -21,6 +22,7 @@ dependencies {
     compile group: 'com.cognifide.qa.bb', name: 'bb-cumber', version: bobcatVersion
     compile group: 'com.cognifide.qa.bb', name: 'bb-aem-classic', version: bobcatVersion
     compile group: 'com.cognifide.qa.bb', name: 'bb-aem-touch-ui', version: bobcatVersion
+    /*compile group: 'com.cognifide.qa.bb', name: 'bb-aem-64', version: bbaemVersion*/
 
 }
 

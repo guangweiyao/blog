@@ -43,7 +43,8 @@
     </scm-->
 
     <properties>
-        <bobcat.version>1.6.0</bobcat.version>
+        <bobcat.core.version>1.6.0</bobcat.core.version>
+        <bobcat.other.version>1.6.0</bobcat.other.version>
         <junit.version>4.8.2</junit.version>
     </properties>
 
@@ -67,22 +68,33 @@
         <dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-core</artifactId>
-            <version>${bobcat.version}</version>
+            <version>${bobcat.core.version}</version>
         </dependency>
         <dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-cumber</artifactId>
-            <version>${bobcat.version}</version>
+            <version>${bobcat.core.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-aem-classic</artifactId>
+            <version>${bobcat.other.version}</version>
         </dependency>
         <dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-aem-touch-ui</artifactId>
-            <version>${bobcat.version}</version>
+            <version>${bobcat.other.version}</version>
         </dependency>
         <dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-reports</artifactId>
-            <version>${bobcat.version}</version>
+            <version>${bobcat.other.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.cognifide.qa.bb/bb-aem-64 -->
+        <dependency>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-aem-64</artifactId>
+            <version>2.0.3</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
