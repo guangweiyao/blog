@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:cq="http://www.day.com/jcr/cq/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="cq:Page">
+    <jcr:content
+        cq:lastModified="{Date}2019-02-18T09:54:06.070-08:00"
+        cq:lastModifiedBy="admin"
+        cq:template="/apps/blog/templates/page-home"
+        jcr:primaryType="cq:PageContent"
+        jcr:title="title"
+        sling:resourceType="blog/components/structure/homePage"
+        browserTitle="title"
+        pageTitle="title">
+        <bodypar
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="wcm/foundation/components/parsys">
+            <title
+                jcr:created="{Date}2019-02-18T09:54:06.068-08:00"
+                jcr:createdBy="admin"
+                jcr:lastModified="{Date}2019-02-18T09:54:06.068-08:00"
+                jcr:lastModifiedBy="admin"
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="blog/components/content/title"/>
+        </bodypar>
+    </jcr:content>
+</jcr:root>

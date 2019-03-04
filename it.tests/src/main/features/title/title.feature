@@ -1,12 +1,10 @@
 Feature: Title Component
 
   Background:
-    Given I am logged in
-    And I create a "Title Component" page using the "Blog Demo Site Content Page" template
+    Given I login and create a test title page
 
-  Scenario: Validate title value
-    When I open the dialog for the "Title" component
-    And I set text field with name "Title" to "Title Component Page Title"
-    And I save the dialog
-    And I switch to "Preview" mode
-    Then I should see the Header Text is "Title Component Page Title"
+  Scenario: Validate title authoring value
+    When I open the test title page
+    And I configure the Title component Title field to be Test Page Title
+    And I save the dialog and switch to Preview mode
+    Then I should see the Header Text is "Test Page Title"

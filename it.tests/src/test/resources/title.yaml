@@ -1,0 +1,7 @@
+Properties:
+  - label: Title
+    type: TEXTFIELD
+    value: Test Page Title
+  - label: Type / Size
+    type: SELECT
+    value: H2

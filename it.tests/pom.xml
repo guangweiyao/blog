@@ -31,35 +31,25 @@
     <!-- P R O J E C T  D E S C R I P T I O N                                   -->
     <!-- ====================================================================== -->
     <artifactId>org-myorg-blog.it.tests</artifactId>
-    <packaging>bundle</packaging>
+    <packaging>jar</packaging>
     <name>Blog - Integration Tests Bundles</name>
     <description>Bundles for Integration Tests for Blog</description>
 
-    <!-- <scm>
-        <connection></connection>
-        <developerConnection></developerConnection>
-        <url></url>
-        <tag>HEAD</tag>
-    </scm-->
-
     <properties>
-        <bobcat.core.version>1.6.0</bobcat.core.version>
-        <bobcat.other.version>1.6.0</bobcat.other.version>
+        <bobcat.core.version>2.0.3</bobcat.core.version>
+        <!--<bobcat.other.version>1.6.0</bobcat.other.version>-->
         <junit.version>4.8.2</junit.version>
     </properties>
 
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.felix</groupId>
-                <artifactId>maven-bundle-plugin</artifactId>
-                <extensions>true</extensions>
-                <inherited>true</inherited>
-                <configuration>
-                    <instructions>
-                        <Sling-Test-Regexp>.*Test</Sling-Test-Regexp>
-                    </instructions>
-                </configuration>
+                <groupId>com.github.temyers</groupId>
+                <artifactId>cucumber-jvm-parallel-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
             </plugin>
         </plugins>
     </build>
@@ -75,7 +65,7 @@
             <artifactId>bb-cumber</artifactId>
             <version>${bobcat.core.version}</version>
         </dependency>
-        <dependency>
+        <!--&lt;!&ndash;<dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-aem-classic</artifactId>
             <version>${bobcat.other.version}</version>
@@ -84,22 +74,34 @@
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-aem-touch-ui</artifactId>
             <version>${bobcat.other.version}</version>
-        </dependency>
+        </dependency>&ndash;&gt;
         <dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-reports</artifactId>
             <version>${bobcat.other.version}</version>
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/com.cognifide.qa.bb/bb-aem-core -->
+        <dependency>
+            <groupId>com.cognifide.qa.bb</groupId>
+            <artifactId>bb-aem-core</artifactId>
+            <version>${bobcat.core.version}</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.cognifide.qa.bb/bb-aem-64 -->
         <dependency>
             <groupId>com.cognifide.qa.bb</groupId>
             <artifactId>bb-aem-64</artifactId>
-            <version>2.0.3</version>
+            <version>${bobcat.core.version}</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>provided</scope>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.12.0</version>
         </dependency>
     </dependencies>
 </project>
